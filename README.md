@@ -16,7 +16,7 @@
 
 ---
 
-## 📸 Project Overview
+## Project Overview
 
 This project serves as a comprehensive **Client Website Demo**, designed to showcase the capabilities and services of a landscaping business. It is a modern, responsive single-page application focused on user experience and visual appeal.
 
@@ -32,7 +32,7 @@ This project serves as a comprehensive **Client Website Demo**, designed to show
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 Developed using the following technologies to ensure performance and scalability:
 
@@ -45,6 +45,6 @@ Developed using the following technologies to ensure performance and scalability
 
 ---
 
-## 🏆 Certifications & Trust
+## Certifications & Trust
 
 ![Certification](/public/images/certification/certification.png)
