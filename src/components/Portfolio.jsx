@@ -1,67 +1,71 @@
-import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const projects = [
-    { title: "Residential Project 1", image: "/images/projects/Projecto1.png" },
-    { title: "Residential Project 2", image: "/images/projects/Projecto2.png" },
-    { title: "Residential Project 3", image: "/images/projects/Projecto3.png" },
-    { title: "Residential Project 4", image: "/images/projects/Projecto1.png" },
-    { title: "Commercial Project 1", image: "/images/projects/Projecto2.png" },
-    { title: "Commercial Project 2", image: "/images/projects/Projecto3.png" },
+const carouselImages = [
+    "/images/carrusel/1366 (11).webp",
+    "/images/carrusel/1366 (14).webp",
+    "/images/carrusel/1366 (2).webp",
+    "/images/carrusel/1366 (4).webp",
+    "/images/carrusel/1366.webp",
+    "/images/carrusel/3183.jpg",
+    "/images/carrusel/Commercial Landscaping.jpg",
+    "/images/carrusel/Hardscape Services.jpg",
+    "/images/carrusel/Tree Services.jpg",
 ];
 
+// Duplicate for seamless infinite scrolling
+const duplicatedImages = [...carouselImages, ...carouselImages];
+
 const Portfolio = () => {
-    const [width, setWidth] = useState(0);
-    const carouselRef = useRef();
-
-    useEffect(() => {
-        if (carouselRef.current) {
-            setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
-        }
-    }, []);
-
     return (
-        <section id="portfolio" className="py-20 bg-gray-50 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <span className="text-secondary font-semibold uppercase tracking-wider text-sm">Our Work</span>
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary mt-2 mb-4">
-                        Recent Projects
-                    </h2>
-                    <div className="h-1 w-24 bg-secondary mx-auto rounded-full"></div>
-                </div>
-
-                <motion.div
-                    ref={carouselRef}
-                    className="cursor-grab overflow-hidden"
-                    whileTap={{ cursor: "grabbing" }}
-                >
-                    <motion.div
-                        drag="x"
-                        dragConstraints={{ right: 0, left: -width }}
-                        className="flex gap-6"
+        <section id="portfolio" className="py-24 bg-gray-50 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+                <div className="text-center">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 drop-shadow-sm"
                     >
-                        {projects.map((project, index) => (
-                            <motion.div
-                                key={index}
-                                className="min-w-[300px] md:min-w-[400px] h-[300px] md:h-[400px] relative rounded-2xl overflow-hidden shadow-lg group"
-                            >
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover pointer-events-none transition-transform duration-500 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                    <h3 className="text-white text-xl font-bold">{project.title}</h3>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </motion.div>
-
-                <div className="text-center mt-8 text-gray-400 text-sm">
-                    <p>Drag to explore our latest work</p>
+                        Portfolio
+                    </motion.h2>
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "80px" }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                        className="h-1.5 bg-primary mx-auto rounded-full"
+                    />
                 </div>
+            </div>
+
+            {/* Scrolling Carousel wrapper */}
+            <div className="relative w-full flex overflow-hidden">
+                {/* 
+                  Animate from -50% to 0% to create a seamless left-to-right loop.
+                  Since we duplicated the array, 50% covers one full set of images.
+                */}
+                <motion.div
+                    animate={{ x: ["-50%", "0%"] }}
+                    transition={{
+                        ease: "linear",
+                        duration: 35, // Adjust this value to change speed
+                        repeat: Infinity,
+                    }}
+                    className="flex gap-6 px-3 w-max"
+                >
+                    {duplicatedImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className="w-[300px] sm:w-[400px] h-[250px] sm:h-[350px] relative rounded-2xl overflow-hidden shadow-md flex-shrink-0"
+                        >
+                            <img
+                                src={src}
+                                alt={`Portfolio project ${index + 1}`}
+                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 cursor-pointer"
+                            />
+                        </div>
+                    ))}
+                </motion.div>
             </div>
         </section>
     );

@@ -8,17 +8,20 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    DEFAULT: '#111F35', // Dark Navy (User provided)
-                    light: '#1e3a5f',
-                    dark: '#0a1120',
+                    DEFAULT: '#D2FF72', // Principal Green-Yellow
+                    light: '#E5FFB1',
+                    dark: '#A8CC5B',
                 },
                 secondary: {
-                    DEFAULT: '#F63049', // Bright Red/Pink (User provided) - Replaces Orange
-                    hover: '#D02752',   // Darker Red/Pink (User provided)
+                    DEFAULT: '#73EC8B', // Soft Green
+                    hover: '#5FCD74',
                 },
                 accent: {
-                    DEFAULT: '#8A244B', // Deep Burgundy (User provided)
-                    light: '#F3F4F6', // Keep a light gray for backgrounds if needed, or map to user's palette
+                    DEFAULT: '#54C392', // Teal Green
+                    light: '#F3F4F6',
+                },
+                dark: {
+                    DEFAULT: '#15B392', // Deep Forest Green
                 }
             },
             fontFamily: {

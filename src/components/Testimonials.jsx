@@ -126,29 +126,18 @@ const ReviewCard = ({ review }) => {
     // The user said: "una vez escritas ya no se modifica" (once written, it doesn't change).
     // So we should probably store "hasAnimated" state or just let it run on mount (which happens when sliding).
     // Let's us a simple effect on mount. 
-
-    const handleCardClick = (e) => {
-        if (e.target.closest('button')) return;
-        window.open("https://www.thumbtack.com/ca/walnut-creek/landscaping/rejoice-rios-landscape/service/316014599988764804", "_blank");
-    };
-
     return (
         <div
-            onClick={handleCardClick}
-            className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all h-full flex flex-col cursor-pointer relative group overflow-hidden"
+            className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-all h-full flex flex-col relative group overflow-hidden"
         >
-            {/* Helper text */}
-            <div className="absolute top-4 right-4 text-xs text-gray-300 group-hover:text-secondary transition-colors">
-                Click to view on Thumbtack ↗
-            </div>
 
             <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-primary font-bold text-xl mr-4 shrink-0 shadow-inner">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-dark font-bold text-xl mr-4 shrink-0 shadow-inner">
                     {review.name.charAt(0)}
                 </div>
                 <div>
-                    <h4 className="font-bold text-primary">{review.name}</h4>
-                    <span className="text-xs text-gray-500 block">{review.date} • Hired on Thumbtack</span>
+                    <h4 className="font-bold text-dark">{review.name}</h4>
+                    <span className="text-xs text-gray-500 block">{review.date}</span>
                 </div>
             </div>
 
@@ -183,13 +172,13 @@ const ReviewCard = ({ review }) => {
                     "
                 </p>
 
-                {/* Red line underline effect */}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-500 group-hover:w-full"></span>
+                {/* Primary color underline effect */}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-500 group-hover:w-full"></span>
 
                 {shouldTruncate && (
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="text-secondary text-xs font-semibold mt-2 hover:underline focus:outline-none relative z-20"
+                        className="text-primary font-bold text-xs mt-2 hover:underline focus:outline-none relative z-20"
                     >
                         {isExpanded ? "Read Less" : "Read More"}
                     </button>
@@ -245,31 +234,28 @@ const Testimonials = () => {
         <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-secondary font-semibold uppercase tracking-wider text-sm"
-                    >
-                        Testimonials
-                    </motion.span>
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-4xl font-bold text-primary mt-2"
+                        className="text-4xl md:text-5xl font-black text-gray-900 drop-shadow-sm uppercase tracking-wider"
                     >
-                        What Our Clients Say
+                        TESTIMONIALS
                     </motion.h2>
-                    <p className="mt-4 text-gray-500">Rated 5.0 stars on Thumbtack</p>
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "80px" }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                        className="h-1.5 bg-primary mx-auto rounded-full mt-6"
+                    />
                 </div>
 
                 <div className="relative">
                     {/* Prev Button */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-12 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-12 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-dark hover:bg-primary hover:text-gray-900 transition-colors"
                         aria-label="Previous reviews"
                     >
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -302,7 +288,7 @@ const Testimonials = () => {
                     {/* Next Button */}
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-12 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-primary hover:bg-secondary hover:text-white transition-colors"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-12 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-dark hover:bg-primary hover:text-gray-900 transition-colors"
                         aria-label="Next reviews"
                     >
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -318,7 +304,7 @@ const Testimonials = () => {
                         // Just showing current relative progress
                         <div
                             key={i}
-                            className={`h-2 rounded-full transition-all duration-300 ${Math.floor(currentIndex / itemsPerPage) === i ? 'w-8 bg-secondary' : 'w-2 bg-gray-300'
+                            className={`h-2 rounded-full transition-all duration-300 ${Math.floor(currentIndex / itemsPerPage) === i ? 'w-8 bg-primary' : 'w-2 bg-gray-300'
                                 }`}
                         />
                     )).slice(0, Math.ceil(reviewsData.length / itemsPerPage))}

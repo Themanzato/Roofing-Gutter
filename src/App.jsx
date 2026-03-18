@@ -1,29 +1,30 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import Portfolio from './components/Portfolio'
-import About from './components/About'
-import Testimonials from './components/Testimonials'
-import CTA from './components/CTA'
-import ServiceAreas from './components/ServiceAreas'
-import Footer from './components/Footer'
-import LocalExperts from './components/LocalExperts'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import ServicesPage from './pages/ServicesPage';
+import PageTransition from './components/PageTransition';
+
+function AppContent() {
+    const location = useLocation();
+    
+    return (
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+                <Route path="/about" element={<PageTransition><AboutUs /></PageTransition>} />
+                <Route path="/services" element={<PageTransition><ServicesPage /></PageTransition>} />
+            </Routes>
+        </AnimatePresence>
+    );
+}
 
 function App() {
     return (
-        <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <Hero />
-            <LocalExperts />
-            <Services />
-            <Portfolio />
-            <About />
-            <Testimonials />
-            <CTA />
-            <ServiceAreas />
-            <Footer />
-        </div>
-    )
+        <Router>
+            <AppContent />
+        </Router>
+    );
 }
 
-export default App
+export default App;
