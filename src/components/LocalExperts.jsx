@@ -84,7 +84,7 @@ const LocalExperts = () => {
                         >
                             <button
                                 className="bg-primary hover:bg-primary-dark text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                                onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+                                onClick={() => window.location.href = '/about'}
                             >
                                 Get to Know Us
                             </button>

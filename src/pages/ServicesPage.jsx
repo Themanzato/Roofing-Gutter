@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
+import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
 
 const checkItems = [
@@ -185,6 +186,7 @@ const ServicesPage = () => {
             </section>
 
             <CTA />
+            <ContactSection />
             <Footer />
         </div>
     );

@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
+import ContactSection from '../components/ContactSection';
 
 const AboutUs = () => {
     return (
@@ -160,6 +161,7 @@ const AboutUs = () => {
             </main>
 
             <CTA />
+            <ContactSection />
             <Footer />
         </div>
     );

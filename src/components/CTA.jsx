@@ -54,7 +54,9 @@ const CTA = () => {
                     </motion.a>
                     
                     <motion.a
-                        href="tel:+1234567890"
+                        href="https://wa.me/19257686272?text=Hello%2C%20I%20would%20like%20to%20receive%20information%20about%20your%20services.%20Thank%20you"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-lg transition-colors shadow-2xl flex items-center justify-center"

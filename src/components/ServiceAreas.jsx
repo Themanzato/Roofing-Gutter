@@ -89,7 +89,7 @@ const ServiceAreas = () => {
             </div>
 
             {/* Bottom Section: Business Hours & Contact Info */}
-            <div className="bg-white py-12 border-t border-gray-100">
+            <div id="contact" className="bg-white py-12 border-t border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center divider-x divide-gray-200">
                         
