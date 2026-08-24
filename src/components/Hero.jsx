@@ -3,26 +3,15 @@ import { motion } from 'framer-motion';
 const Hero = () => {
     return (
         <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 flex items-center min-h-screen md:min-h-[800px]">
-            {/* Background Video */}
-            <div className="absolute inset-0 z-0 overflow-hidden bg-[#173B2C]">
-                <video
-                    className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-center"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="auto"
-                    controls={false}
-                    disablePictureInPicture
-                    onPause={(event) => event.currentTarget.play()}
-                    onContextMenu={(event) => event.preventDefault()}
-                    draggable="false"
-                    aria-hidden="true"
-                >
-                    <source src="/videos/video.mp4" type="video/mp4" />
-                </video>
+            {/* Background Image */}
+            <div
+                className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
+                style={{
+                    backgroundImage: "url('/images/new images/portadaAbout.jpg')"
+                }}
+            >
                 {/* Green-tinted overlay for brand consistency */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#D2FF72]/40 via-[#73EC8B]/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-[#73EC8B]/20"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
