@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 flex items-center min-h-screen md:min-h-[800px]">
             {/* Background Image */}
@@ -40,7 +43,7 @@ const Hero = () => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-primary hover:bg-primary-dark text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl border border-primary-dark/20"
-                                onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}
+                                onClick={() => navigate('/services')}
                             >
                                 Explore Our Services
                             </motion.button>

@@ -100,7 +100,7 @@ const LocalExperts = () => {
                         className="w-full lg:w-1/2 flex justify-center lg:justify-end"
                     >
                         <img
-                            src="/images/backgrounds/hero.png"
+                            src="/images/new images/Chico.png"
                             alt="Landscape professional working outdoors"
                             className="max-w-full h-auto object-contain"
                         />

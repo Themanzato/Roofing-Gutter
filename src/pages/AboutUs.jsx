@@ -13,10 +13,11 @@ const AboutUs = () => {
                 {/* Background Image */}
                 <div
                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed filter brightness-95"
-                    style={{ backgroundImage: "url('/images/backgrounds/Header2.jpg')" }}
+                    style={{ backgroundImage: "url('/images/new images/portadaAbout.webp')" }}
                 >
                     {/* Dark gradient overlay to ensure logo pops */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+                    <div className="absolute inset-0 bg-[#73EC8B]/20"></div>
                 </div>
 
                 {/* Content: Just the Large Logo */}
@@ -49,7 +50,7 @@ const AboutUs = () => {
                             <img 
                                 src="/images/aboutus/aboutus1.png" 
                                 alt="About our work" 
-                                className="w-full h-auto max-w-[450px] object-contain relative z-10"
+                                className="w-full h-auto max-w-[600px] object-contain relative z-10"
                                 style={{ filter: "drop-shadow(0 20px 25px rgba(0,0,0,0.15))" }}
                             />
                         </div>
@@ -57,7 +58,7 @@ const AboutUs = () => {
                     
                     {/* Text side */}
                     <div className="w-full md:w-1/2 flex items-center p-8 lg:p-16 xl:p-24 bg-white">
-                        <div className="max-w-xl mr-auto md:ml-auto md:mr-0 text-left md:text-right">
+                        <div className="max-w-xl mx-auto md:ml-12 md:mr-auto text-left">
                             <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-8 tracking-tight">About Us</h2>
                             <div className="space-y-6 text-gray-600 font-medium text-lg leading-relaxed">
                                 <p>We are a faith-based landscaping company committed to serving our community with integrity, excellence, and dedication. Guided by Christian values, we believe in working with honesty, respect, and responsibility in every project.</p>
@@ -86,7 +87,7 @@ const AboutUs = () => {
                         <div 
                             className="absolute inset-0 bg-cover bg-center"
                             style={{ 
-                                backgroundImage: "url('/images/aboutus/aboutus2.png')",
+                                backgroundImage: "url('/images/new images/team.webp')",
                                 WebkitMaskImage: "linear-gradient(to left, black 60%, transparent 100%)",
                                 maskImage: "linear-gradient(to left, black 60%, transparent 100%)"
                             }}

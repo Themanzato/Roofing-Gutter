@@ -107,8 +107,7 @@ const ServiceAreas = () => {
                             </div>
                             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 tracking-wide">BUSINESS HOURS</h3>
                             <div className="space-y-1 md:space-y-2 text-gray-600 font-medium text-sm md:text-base">
-                                <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
-                                <p>Saturday: 9:00 AM – 2:00 PM</p>
+                                <p>Monday – Saturday: 7:00 AM – 6:00 PM</p>
                                 <p>Sunday: Closed</p>
                             </div>
                         </motion.div>
@@ -131,8 +130,8 @@ const ServiceAreas = () => {
                             </div>
                             <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 tracking-wide">CONTACT US</h3>
                             <div className="space-y-1 md:space-y-2 text-gray-600 font-medium text-sm md:text-base">
-                                <p><strong className="text-gray-900">Phone:</strong> (925) 381-9162</p>
-                                <p><strong className="text-gray-900">Email:</strong> info@techinnovationroofing.com</p>
+                                <p><strong className="text-gray-900">Phone:</strong> (925) 768-6272</p>
+                                <p><strong className="text-gray-900">Email:</strong> rejoicerioslandscape@gmail.com</p>
                             </div>
                         </motion.div>
 

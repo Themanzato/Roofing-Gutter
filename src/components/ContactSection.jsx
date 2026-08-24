@@ -20,8 +20,7 @@ const ContactSection = () => {
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 tracking-wide">BUSINESS HOURS</h3>
                         <div className="space-y-2 text-gray-600 font-medium text-sm md:text-base">
-                            <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
-                            <p>Saturday: 9:00 AM – 2:00 PM</p>
+                            <p>Monday – Saturday: 7:00 AM – 6:00 PM</p>
                             <p>Sunday: Closed</p>
                         </div>
                     </motion.div>
@@ -41,8 +40,8 @@ const ContactSection = () => {
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 tracking-wide">CONTACT US</h3>
                         <div className="space-y-2 text-gray-600 font-medium text-sm md:text-base">
-                            <p>Phone: <a href="tel:+19253819162" className="hover:text-primary transition-colors">(925) 381-9162</a></p>
-                            <p>Email: <a href="mailto:info@techinnovationroofing.com" className="hover:text-primary transition-colors">info@techinnovationroofing.com</a></p>
+                            <p>Phone: <a href="tel:+19257686272" className="hover:text-primary transition-colors">(925) 768-6272</a></p>
+                            <p>Email: <a href="mailto:rejoicerioslandscape@gmail.com" className="hover:text-primary transition-colors">rejoicerioslandscape@gmail.com</a></p>
                         </div>
                     </motion.div>
 

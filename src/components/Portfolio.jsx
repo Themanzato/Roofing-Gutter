@@ -6,7 +6,6 @@ const carouselImages = [
     "/images/carrusel/1366 (2).webp",
     "/images/carrusel/1366 (4).webp",
     "/images/carrusel/1366.webp",
-    "/images/carrusel/3183.jpg",
     "/images/carrusel/Commercial Landscaping.jpg",
     "/images/carrusel/Hardscape Services.jpg",
     "/images/carrusel/Tree Services.jpg",

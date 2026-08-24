@@ -31,14 +31,14 @@ const ServicesPage = () => {
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black/45" />
 
-                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-20">
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-20 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-4xl md:text-6xl font-black text-white drop-shadow-xl mb-8 leading-tight"
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]"
                     >
-                        Landscape Design &amp; Installation
+                        SERVICES
                     </motion.h1>
 
                     <motion.a
