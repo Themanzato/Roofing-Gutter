@@ -7,7 +7,7 @@ const Hero = () => {
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
                 style={{
-                    backgroundImage: "url('/images/new images/portadaAbout.jpg')"
+                    backgroundImage: "url('/images/new images/portadaAbout.webp')"
                 }}
             >
                 {/* Green-tinted overlay for brand consistency */}
