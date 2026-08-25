@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const services = [
     {
@@ -147,17 +148,21 @@ const Services = () => {
 
                 {/* Read More Button */}
                 <div className="text-center">
-                    <motion.a
-                        href="/services"
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-block bg-primary hover:bg-primary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-md border border-primary-dark/20 transition-all"
+                        className="inline-block"
                     >
-                        Read more
-                    </motion.a>
+                        <Link
+                            to="/services"
+                            className="inline-block bg-primary hover:bg-primary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg shadow-md border border-primary-dark/20 transition-all"
+                        >
+                            Read more
+                        </Link>
+                    </motion.div>
                 </div>
             </div>
         </section>

@@ -17,6 +17,26 @@ const CTA = () => {
             <div className="absolute inset-0 z-0 bg-green-600/40"></div>
 
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 drop-shadow-xl tracking-tight"
+                >
+                    Call Us to Discuss Your Project
+                </motion.h2>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="text-xl md:text-2xl text-white mb-10 font-medium drop-shadow-md leading-relaxed"
+                >
+                    We offer phone consultations and free on-site estimates<br className="hidden md:block" />
+                    at no cost. We’re ready to work with you
+                </motion.p>
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
