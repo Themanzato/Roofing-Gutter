@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
-    const navigate = useNavigate();
-
     return (
         <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 flex items-center min-h-screen md:min-h-[800px]">
             {/* Background Image */}
@@ -39,14 +37,18 @@ const Hero = () => {
                             transition={{ delay: 0.7 }}
                             className="flex justify-start"
                         >
-                            <motion.button
+                            <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-primary hover:bg-primary-dark text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl border border-primary-dark/20"
-                                onClick={() => navigate('/services')}
+                                className="inline-block"
                             >
-                                Explore Our Services
-                            </motion.button>
+                                <Link
+                                    to="/services"
+                                    className="inline-block bg-primary hover:bg-primary-dark text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl border border-primary-dark/20"
+                                >
+                                    Explore Our Services
+                                </Link>
+                            </motion.div>
                         </motion.div>
                     </motion.div>
 

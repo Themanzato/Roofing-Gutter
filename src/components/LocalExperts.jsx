@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const LocalExperts = () => {
     return (
@@ -82,12 +83,12 @@ const LocalExperts = () => {
                             transition={{ delay: 0.3 }}
                             className="mt-10"
                         >
-                            <button
-                                className="bg-primary hover:bg-primary-dark text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-                                onClick={() => window.location.href = '/about'}
+                            <Link
+                                to="/about"
+                                className="inline-block bg-primary hover:bg-primary-dark text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                             >
                                 Get to Know Us
-                            </button>
+                            </Link>
                         </motion.div>
                     </div>
 
